@@ -13,7 +13,17 @@ from geotweet import formatters, listener, observers
 
 
 class Runner:
+    """
+    Control the main program loop.
+
+    This class works as a factory for all the other entities involved:
+    it's a wrapper around low-level logic, needed to encapsulate the
+    creation and the internal working of the stream reader and the map
+    renderer.
+    """
+
     def __init__(self):
+        """Initialize a Runner object."""
         self._credentials = None
         self._coordinates = None
         self._figure = None
@@ -136,12 +146,14 @@ class Runner:
         signal.signal(signal.SIGINT, handler)
 
     def stop(self):
+        """Halt the main loop and gracefully shutdown the program."""
         self._figure.canvas.mpl_disconnect(self._callback_id)
         plt.close(self._figure)
         self._stream.disconnect()
         sys.exit('\nGoodbye!')
 
     def start(self):
+        """Build all the required objects and start the main loop."""
         self._parse_cli()
         self._setup_worldmap()
         self._setup_stream()
