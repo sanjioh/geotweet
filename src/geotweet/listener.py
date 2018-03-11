@@ -1,10 +1,9 @@
-import os
-
 import tweepy
 
 
 class GeoStreamListener(tweepy.StreamListener):
-    def __init__(self, observers=None):
+    def __init__(self, runner, observers=None):
+        self._runner = runner
         self._observers = observers or []
         super().__init__()
 
@@ -13,10 +12,9 @@ class GeoStreamListener(tweepy.StreamListener):
             for observer in self._observers:
                 observer.update(status)
 
-    @staticmethod
-    def _exit(reason):
+    def _exit(self, reason):
         print(f'Something went wrong: {reason} - exiting.')
-        os._exit(1)
+        self._runner.stop()
 
     def on_exception(self, exception):
         self._exit(f'unhandled exception ({exception!a})')
