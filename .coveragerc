@@ -1,0 +1,10 @@
+[run]
+branch = True
+
+[paths]
+app_path =
+    src/geotweet
+    .tox/*/lib/python*/site-packages/geotweet
+
+[report]
+show_missing = True
