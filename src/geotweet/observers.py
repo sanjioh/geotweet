@@ -1,8 +1,6 @@
 import sys
 from collections import namedtuple
 
-import matplotlib.pyplot as plt
-
 Tweet = namedtuple(
     'Tweet',
     ['longitude', 'latitude', 'user_name', 'user_screen_name', 'text'],
@@ -26,7 +24,8 @@ class ConsoleObserver:
 
 
 class MapObserver:
-    def __init__(self, worldmap):
+    def __init__(self, figure, worldmap):
+        self._figure = figure
         self._worldmap = worldmap
 
     def update(self, status):
@@ -34,4 +33,4 @@ class MapObserver:
             *status.coordinates['coordinates'],
         )
         self._worldmap.plot(longitude, latitude, 'ro', markersize=5)
-        plt.draw()
+        self._figure.canvas.start_event_loop(0.001)
