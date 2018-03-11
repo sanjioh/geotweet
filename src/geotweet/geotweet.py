@@ -115,6 +115,7 @@ class Runner:
         self._figure = figure
         self._worldmap = worldmap
         plt.show()
+        plt.pause(0.001)
 
     def _setup_stream(self):
         (consumer_key, consumer_secret,
