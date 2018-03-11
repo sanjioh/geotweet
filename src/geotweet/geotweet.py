@@ -9,9 +9,7 @@ import matplotlib.pyplot as plt
 import tweepy
 from mpl_toolkits.basemap import Basemap
 
-import formatters
-import listener
-import observers
+from geotweet import formatters, listener, observers
 
 
 class Runner:
