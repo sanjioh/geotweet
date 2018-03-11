@@ -33,5 +33,5 @@ class MapObserver:
         longitude, latitude = self._worldmap(
             *status.coordinates['coordinates'],
         )
-        self._worldmap.plot(longitude, latitude, 'ro', markersize=2)
+        self._worldmap.plot(longitude, latitude, 'ro', markersize=5)
         plt.draw()
