@@ -19,10 +19,6 @@ class GeoStreamListener(tweepy.StreamListener):
     def on_exception(self, exception):
         self._exit(f'unhandled exception ({exception!a})')
 
-    def on_limit(self, track):
-        # TODO: ???
-        return
-
     def on_error(self, status_code):
         self._exit(f'status code {status_code}')
 
