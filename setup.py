@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 NAME = 'geotweet'
-DESCRIPTION = 'Stream geolocalized tweets and plot them on a map.'
+DESCRIPTION = 'Fetch geolocalized tweets and plot them on a map.'
 URL = 'https://github.com/sanjioh/geotweet'
 AUTHOR = 'Fabio Sangiovanni'
 REQUIRES_PYTHON = '>=3.6.0'

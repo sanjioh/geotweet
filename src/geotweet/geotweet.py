@@ -35,7 +35,7 @@ class Runner:
         default_long = 180
         default_lat = 90
         parser = argparse.ArgumentParser(
-            description='Stream geolocalized tweets and plot them on a map.',
+            description='Fetch geolocalized tweets and plot them on a map.',
         )
         parser.add_argument(
             'consumer_key',
