@@ -1,7 +1,7 @@
 """
 Observers module.
 
-Observers are objects which listen to stream of events and act
+Observers are objects which listen to streams of events and act
 accordingly. In our case, observers receive geolocalized
 tweets and perform different actions depending on their role.
 """
