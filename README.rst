@@ -13,7 +13,7 @@ Prerequisites
 - Python 3.6
 - the ``geos`` library must be installed on the system
 
-This software is tested on Mac OS and Ubuntu 17.10.
+This software is tested on Mac OS 10.13.3 and Ubuntu 17.10.
 
 Installation
 ------------
