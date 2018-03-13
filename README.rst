@@ -88,14 +88,14 @@ Example
 Tests
 -----
 
-Simply run: ``tox``
+Simply run ``tox`` from the repository root.
 
 Notes
 -----
 
-- this project uses a ``src`` directory to prevent accidental import of modules from the current
-  directory during development, and to enforce testing against the installed version of the program
-  [1]_ [2]_
+- this project uses an ``src`` directory layout to prevent packaging errors and to enforce
+  testing against a ``pip``-installed copy of the program (as opposed to the one in the
+  current working directory) [1]_ [2]_
 
 - this program is single-threaded synchronous, so expect the map to appear frozen when tweets aren't flowing
 
