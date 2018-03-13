@@ -5,7 +5,7 @@ This software fetches geolocalized tweets from the Twitter Streaming APIs,
 shows them on the terminal and draws their location on a world map. It's based on
 ``tweepy`` and ``matplotlib``.
 
-.. image:: http://www.ladybiss.it/map.png
+.. image:: http://www.ladybiss.it/worldmap.png
 
 Prerequisites
 -------------
