@@ -9,11 +9,11 @@ import tweepy
 
 class GeoStreamListener(tweepy.StreamListener):
     """
-    Provide hooks to invoke when certain stream-related events happen.
+    Provide hooks to be invoked when certain events happen.
 
     As a subclass of tweepy.StreamListener, this class
-    is the main bridge with the tweepy streaming library.
-    It's methods are hooks that the tweepy machinery invokes
+    is the main bridge between our code and the tweepy streaming library.
+    It's methods are hooks that the tweepy machinery will invoke
     when something relevant happens (new tweets, unhandled errors,
     timeouts, and so on).
     This implementation shuts the program down whenever something

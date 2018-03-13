@@ -104,6 +104,7 @@ class Runner:
         plt.ion()
         mpl.rcParams['toolbar'] = 'None'
         figure = plt.figure(figsize=(12, 8))
+        figure.canvas.set_window_title('Geotweet')
         worldmap = Basemap(projection='robin', lat_0=0, lon_0=0)
         with warnings.catch_warnings():
             # Temporarily silence MatplotlibDeprecationWarning.

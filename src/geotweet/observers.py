@@ -36,8 +36,10 @@ class ConsoleObserver:
         Print new tweets on standard output.
 
         update() receives a tweet as argument and performs a light
-        validation of its structure. It then uses the formatter object
-        to get a string representation of the tweet, and writes it to stdout.
+        validation of its structure by building a Tweet namedtuple with
+        some of its contents.
+        It then uses the formatter object to get a string representation
+        of the tweet, and writes it to stdout.
         """
         try:
             tweet = self._tweet_cls(
@@ -58,7 +60,7 @@ class MapObserver:
     Render tweets on a map.
 
     MapObserver extracts coordinates from tweets and plot their position
-    on a world map using Matplotlib and Basemap.
+    on a world map using Matplotlib and Basemap as graphic libraries.
     """
 
     def __init__(self, figure, worldmap):
@@ -71,7 +73,7 @@ class MapObserver:
         Plot new tweets as markers on a map.
 
         update() receives a tweet as argument and extracts its coordinates.
-        It then adds a marker to the map, representing the location.
+        It then adds a marker to the map, representing that location.
         """
         try:
             longitude, latitude = self._worldmap(

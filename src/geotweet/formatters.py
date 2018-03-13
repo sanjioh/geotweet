@@ -1,7 +1,7 @@
 """
 Formatters module.
 
-The class observer.ConsoleObserver uses a formatter to render a
+The class observers.ConsoleObserver uses a formatter to render a
 string representation of a tweet to the terminal, according to
 some particular formatting strategy.
 This module can be extended with other formatter classes; they only
@@ -20,5 +20,5 @@ class SimpleFormatter:
     )
 
     def format(self, tweet):
-        """Build a string representation of a tweet."""
+        """Return a string representation of a tweet."""
         return self._format_string.format(tweet=tweet)
