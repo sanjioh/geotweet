@@ -14,7 +14,7 @@ pyshp==1.2.12
 PySocks==1.6.8
 python-dateutil==2.6.1
 pytz==2018.3
-requests==2.18.4
+requests==2.20.0
 requests-oauthlib==0.8.0
 six==1.11.0
 tweepy==3.6.0
